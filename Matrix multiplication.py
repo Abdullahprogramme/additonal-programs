@@ -22,3 +22,29 @@ print(new_matrix, end='\n\n')
 new_matrix = [[sum(a * b) for b in matrix_b] for a in matrix_a]
 for _ in new_matrix:
     print(_)
+
+
+
+# my method yet in production
+# nums = [20,100,10,12,5,13]
+
+# if len(nums) >= 3:
+#     start, count = 1, 0
+#     temp = nums[0]
+#     while start != len(nums):
+#         if temp < nums[start]: 
+#             count += 1
+#             temp = nums[start]
+#         start += 1
+#         if count == 2: print(True)
+# print(False)
+# # someone's solution
+# first = second = float('inf') 
+# for n in nums: 
+#     if n <= first: 
+#         first = n
+#     elif n <= second:
+#         second = n
+#     else:
+#         print(True)
+# print(False)

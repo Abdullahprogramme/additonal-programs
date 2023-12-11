@@ -1,7 +1,7 @@
 # Advent of code problem number 2 starts here #
 with open('C:\Personal Files\OneDrive - Habib University\Python\Extra\elfs.txt', 'r') as f:
     fh = f.readlines()
-    game_sum, line_number = 0, 0
+    game_sum, line_number = 0, 1
     for line in fh: # Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
         flag = True
         if line_number < 10:

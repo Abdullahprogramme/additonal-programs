@@ -2,15 +2,15 @@
 with open('C:\Personal Files\OneDrive - Habib University\Python\Extra\elfs.txt', 'r') as f:
     fh = f.readlines()
     game_sum, line_number = 0, 1
-    for line in fh: # Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
+    for line_number, line in enumerate(fh): # Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
         flag = True
-        if line_number < 10:
+        if line_number + 1 < 10:
             game_number = line[5]
             lst = line[8:].split(";") # >= 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
-        elif line_number < 100:
+        elif line_number + 1 < 100:
             game_number = line[5:7]
             lst = line[9:].split(";")
-        elif line_number >= 100:
+        elif line_number + 1 >= 100:
             game_number = line[5:8]
             lst = line[10:].split(";")
         for items in lst: # 1 blue, 2 green
@@ -24,7 +24,6 @@ with open('C:\Personal Files\OneDrive - Habib University\Python\Extra\elfs.txt',
                     if int(colour.strip()[:2]) > 13: flag = False
         if flag is False: flag = True
         else: game_sum += int(game_number)
-        line_number += 1
 print(game_sum)
 f.close()
 # Advent of code problem number 2 ends here #

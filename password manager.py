@@ -1,4 +1,7 @@
-
+''' 
+Lets the user enter username and password and saves on a local text file.
+Can reveal the password and username if wanted too
+'''
 def Add():
     user=input("Enter your username: ") 
     pwd=input("Enter your password: ") 
